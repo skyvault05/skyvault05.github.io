@@ -18,6 +18,61 @@
   <!-- Theme CSS -->
   <link href="css/freelancer.min.css" rel="stylesheet">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec57346cf977d1a62ba1f795483725d0"></script>
+
+
+  <script>
+    $(function(){
+      $('#map').empty();
+      var container = document.getElementById('map');
+
+      var options = { //지도를 생성할 때 필요한 기본 옵션
+          center: new kakao.maps.LatLng(37.40357, 127.109129), //지도의 중심좌표.
+          level: 6 //지도의 레벨(확대, 축소 정도)
+        };
+      var map = new kakao.maps.Map(container, options);
+      
+      
+      
+      var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+      var imageSize = new kakao.maps.Size(24, 35);
+      var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+      
+      function geoError(err){
+        
+        let centerPosition = new kakao.maps.LatLng(37.40357, 127.109129);
+        let centerMarker = new kakao.maps.Marker({
+          position : centerPosition,
+          image : markerImage
+        });
+        /* centerMarker.setMap(map); */ 
+      }
+      
+      
+      var options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+      };
+      
+      function geoSuccess(pos){
+        let crd = pos.coords;
+        console.log(crd.latitude, crd.longitude);
+        map.setCenter(new kakao.maps.LatLng(crd.latitude, crd.longitude));
+        let centerPosition = new kakao.maps.LatLng(crd.latitude, crd.longitude);
+        
+        let centerMarker = new kakao.maps.Marker({
+          position : centerPosition,
+          image : markerImage
+        });
+        /* centerMarker.setMap(map); */
+        $('form').attr('action', "https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/v1/storesByGeo/json?lat="+crd.latitude+"&lng="+crd.longitude+"&m=5000")
+      }
+      
+      navigator.geolocation.getCurrentPosition(geoSuccess ,geoError, options);
+    });
+  </script>
 </head>
 
 <body id="page-top">
@@ -189,7 +244,7 @@
         <div class="col-lg-4 ml-auto">
           <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
         </div>
-        <div class="col-lg-4 mr-auto">
+        <div class="col-lg-4 mr-auto" id="map">
           <p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p>
         </div>
       </div>
