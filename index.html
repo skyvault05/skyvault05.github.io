@@ -28,7 +28,7 @@
       var container = document.getElementById('map');
 
       var options = { //지도를 생성할 때 필요한 기본 옵션
-          center: new kakao.maps.LatLng(37.40357, 127.109129), //지도의 중심좌표.
+          center: new kakao.maps.LatLng(37.402191, 127.106747), //지도의 중심좌표.
           level: 6 //지도의 레벨(확대, 축소 정도)
         };
       var map = new kakao.maps.Map(container, options);
@@ -41,7 +41,7 @@
       
       function geoError(err){
         
-        let centerPosition = new kakao.maps.LatLng(37.40357, 127.109129);
+        let centerPosition = new kakao.maps.LatLng(37.402191, 127.106747);
         let centerMarker = new kakao.maps.Marker({
           position : centerPosition,
           image : markerImage
