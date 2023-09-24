@@ -32,8 +32,6 @@ navigation:
     url: /
   - text: About
     url: /about
-  - text: Style Guide
-    url: /style-guide
   - text: Tags
     url: /tags
 
