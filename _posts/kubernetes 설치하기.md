@@ -5,7 +5,7 @@ date: {}
 feature_image: images/road.jpg
 tags:
   - work
-published: false
+published: true
 ---
 ## A New Post
 
