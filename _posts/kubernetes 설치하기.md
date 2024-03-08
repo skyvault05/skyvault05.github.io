@@ -1,10 +1,10 @@
 ---
 layout: post
-description: First Post!
+description: install kubernetes
 date: {}
 feature_image: images/road.jpg
 tags:
-  - work
+  - kubernetes
 published: true
 ---
 ## A New Post
