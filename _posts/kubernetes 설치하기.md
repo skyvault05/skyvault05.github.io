@@ -1,10 +1,11 @@
 ---
 layout: post
 description: First Post!
-date: 2024-03-08T00:00:00.000Z
+date: {}
 feature_image: images/road.jpg
 tags:
   - work
+published: false
 ---
 ## A New Post
 
@@ -13,4 +14,3 @@ Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the 
 
 
 ![image-20240308182011583](images\image-20240308182011583.png)
-
