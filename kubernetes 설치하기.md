@@ -1,10 +1,11 @@
 ---
 layout: post
 description: First Post!
-date: 2024-03-08T00:00:00.000Z
+date: {}
 feature_image: images/road.jpg
 tags:
   - kubernetes
+published: false
 ---
 ## A New Post
 
