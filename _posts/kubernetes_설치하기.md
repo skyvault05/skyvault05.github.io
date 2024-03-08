@@ -1,7 +1,8 @@
 ---
 layout: post
+title: kubernetes 설치
 description: install kubernetes
-date: {}
+date: 2023-09-24
 feature_image: images/road.jpg
 tags:
   - kubernetes
