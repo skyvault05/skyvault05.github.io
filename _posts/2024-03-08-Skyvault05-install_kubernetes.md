@@ -124,7 +124,7 @@ VMWare를 사용해서 Control Plain과 Woker Node를 각각 다른 VM에 설치
      net.ipv6.conf.all.forwarding=1
      ```
 
-     ![image-20240309232322554](images\image-20240309232322554.png)
+     ![image-20240309232322554](images/image-20240309232322554.png)
 
      ```bash
      sudo modprobe br_netfilter
