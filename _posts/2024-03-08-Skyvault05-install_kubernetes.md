@@ -14,6 +14,8 @@ tags: [kuberntes]
 
 VMWare를 사용해서 Control Plain과 Woker Node를 각각 다른 VM에 설치할 계획이다. 최종적으로는 Jenkins와 ArgoCD를 이용해서 CI/CD Pipeline을 구축하는 것이 목표.
 
+<!--more-->
+
 ### 설치 목록
 
 - Containerd 
@@ -26,7 +28,7 @@ VMWare를 사용해서 Control Plain과 Woker Node를 각각 다른 VM에 설치
 
 1. Containerd 설치
 
-   - Docker 설치를 위해 Package Manager에 Repository추가.
+   - Containerd 설치를 위해 Package Manager에 Repository추가.
      ```bash
      sudo apt-get update
      sudo apt-get install ca-certificates curl
@@ -82,7 +84,7 @@ VMWare를 사용해서 Control Plain과 Woker Node를 각각 다른 VM에 설치
 2. Kubeadm, Kubelet, Kubectl 설치
 
    + swap memory 비활성화
-     필자는 swap memory가 이미 비활성화 돼있었지만 활성화 돼있다면 /etc/fstab 비활성 화 할 수 있다.
+     필자는 swap memory가 이미 비활성화 돼있었지만 활성화 돼있다면 /etc/fstab 비활성 화 할 수 있다.   
      swapoff 명령어로 다음 부팅 전 까지만 적용되니 /etc/fstab 파일을 수정할 것
 
    + 쿠버네티스 설치에 필요한 패키지들 설치. 기존 Containerd를 설치하면서 설치된 ca-certificates, curl은 제외.
@@ -120,7 +122,7 @@ VMWare를 사용해서 Control Plain과 Woker Node를 각각 다른 VM에 설치
      net.bridge.bridge-nf-call-ip6tables = 1 
      net.bridge.bridge-nf-call-iptables = 1
      # 주석제거
-     net.ip.ip_forward=1
+     net.ipv4.ip_forward=1
      net.ipv6.conf.all.forwarding=1
      ```
 
