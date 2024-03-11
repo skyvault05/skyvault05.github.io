@@ -85,7 +85,7 @@ VMWare를 사용해서 Control Plain과 Woker Node를 각각 다른 VM에 설치
 
    + swap memory 비활성화
      필자는 swap memory가 이미 비활성화 돼있었지만 활성화 돼있다면 /etc/fstab 비활성 화 할 수 있다.   
-     swapoff 명령어로 다음 부팅 전 까지만 적용되니 /etc/fstab 파일을 수정할 것
+     swapoff 명령어로는 다음 부팅 전 까지만 적용되니 /etc/fstab 파일을 수정할 것
 
    + 쿠버네티스 설치에 필요한 패키지들 설치. 기존 Containerd를 설치하면서 설치된 ca-certificates, curl은 제외.
      ```bash
@@ -225,11 +225,11 @@ VMWare를 사용해서 Control Plain과 Woker Node를 각각 다른 VM에 설치
 
 
 
-2. Kubeadm, Kubelet, Kubectl 설치
+2. Kubeadm, Kubelet설치
 
    + swap memory 비활성화
      필자는 swap memory가 이미 비활성화 돼있었지만 활성화 돼있다면 /etc/fstab 비활성 화 할 수 있다.   
-     swapoff 명령어로 다음 부팅 전 까지만 적용되니 /etc/fstab 파일을 수정할 것
+     swapoff 명령어로는 다음 부팅 전 까지만 적용되니 /etc/fstab 파일을 수정할 것
 
    + 쿠버네티스 설치에 필요한 패키지들 설치. 기존 Containerd를 설치하면서 설치된 ca-certificates, curl은 제외.
      ```bash
@@ -246,12 +246,12 @@ VMWare를 사용해서 Control Plain과 Woker Node를 각각 다른 VM에 설치
      $ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
      ```
 
-   + Kubeadm, Kubelet, Kubectl 설치
+   + Kubeadm, Kubelet 설치
      ```bash
      $ sudo apt-get update
-     $ sudo apt-get install -y kubelet kubeadm kubectl
+     $ sudo apt-get install -y kubelet kubeadm
      # 현재 버전 고정
-     $ sudo apt-mark hold kubelet kubeadm kubectl
+     $ sudo apt-mark hold kubelet kubeadm
      ```
 
    + CNI 네트워크 활성화를 위한 네트워크 설정
