@@ -97,4 +97,4 @@ Menifest를 통해 설치할 계획이며 Service는 NodePort Type을 사용해 
    이후 이상이 없으면 argocd-server의 포트(현재 30907)로 접속이 된다.
 
    ![image-20240313213122441](images\image-20240313213122441.png)
-   `**NodePort**는 고정포트(위의 80:30907/TCP,443:31144/TCP)로 각 노드의 IP를 통해 서비스를 노출시킨다. 다만 포트 범위가 30000-32767 사이로 지정되고, 기본 IP는 Control-Plane으로 지정되기에, 클러스터 외부에서 접근하려면 [Control-Plane IP:NodePort]로 접속해야한다.`
+   **NodePort**는 고정포트(위의 80:30907/TCP,443:31144/TCP)로 각 노드의 IP를 통해 서비스를 노출시킨다. 다만 포트 범위가 30000-32767 사이로 지정되고, 기본 IP는 Control-Plane으로 지정되기에, 클러스터 외부에서 접근하려면 [Control-Plane IP:NodePort]로 접속해야한다.
