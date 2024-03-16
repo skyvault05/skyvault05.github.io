@@ -66,8 +66,10 @@ Menifest를 통해 설치할 계획이며 Service는 NodePort Type을 사용해 
    
    ID: admin
    PWD: <초기 비밀번호>
-   ![image-20240313213002944](images\image-20240313213002944-1710596552560-1.png)
+   
 
+   ![image-20240313213002944](images\image-20240313213002944-1710596552560-1.png)
+   
 6. 비밀번호 변경
    초기 비밀번호 확인 시 강조해서 비밀번호 바꾸기를 권장한다...   
    왼쪽 메뉴에서 User Info -> Update Password 를 누르면 아래와 같은 화면이 나온다. Current Password는 아까 확인한 기본 비밀번호를 입력하면 되고, New Password와 Confirm New Password에는 변경할 비밀번호를 입력한 후 Save New Password를 누르면 반영된다.
