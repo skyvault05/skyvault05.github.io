@@ -65,7 +65,7 @@ Menifest를 통해 설치할 계획이며 Service는 NodePort Type을 사용해 
    
    설치된 Node의 IP:8080 으로 브라우저에서 접속    
 
-   ID: admin
+   ID: admin   
    PWD: 초기 비밀번호   
    ![image-20240313213002944](images\image-20240313213002944-1710596552560-1.png)
    
