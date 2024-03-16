@@ -62,7 +62,7 @@ Menifest를 통해 설치할 계획이며 Service는 NodePort Type을 사용해 
    ```
 
 5. GUI 로그인
-   <설치된 Node의 IP>:8080 으로 브라우저에서 접속
+   <설치된 Node의 IP>:8080 으로 브라우저에서 접속  
    ![image-20240313213002944](images\image-20240313213002944.png)
 
    ID: admin
