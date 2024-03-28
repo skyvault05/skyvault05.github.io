@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Kubernetes에 Ingress Controller 설치하기"
-description: "Kubernetes에 Ingress Controller 설치하기"
+title: "Kubernetes에 ArgoCD 설치하기"
+description: "Kubernetes에 ArgoCD 설치하기"
 date: 2024-03-13
 feature_image: images/road.jpg
 tags: [kuberntes, ArgoCD, linux]
