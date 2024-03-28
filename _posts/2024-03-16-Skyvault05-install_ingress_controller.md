@@ -85,11 +85,15 @@ Cloud환경에선 플랫폼에서 LB를 직접 제공하는 경우가 많다.
      - fc00:f853:0ccd:e799::/124
    ```
 
+      
+
    ```bash
    $ kubectl apply -n metallb-system -f metallb-ipap.yaml
    ```
 
-5. L2Advertisement를 만들어준 후, 마찬가지로 yaml 파일을 적용시켜준다.
+5. L2Advertisement를 만들어준 후, 마찬가지로 yaml 파일을 적용시켜준다.   
+   
+
    ````bash
    # https://metallb.universe.tf/configuration/_advanced_l2_configuration/ 에서 제공하는 예시
    # 파일명은 metallb-l2.yaml로 정함
@@ -102,6 +106,9 @@ Cloud환경에선 플랫폼에서 LB를 직접 제공하는 경우가 많다.
      ipAddressPools:
      - first-pool
    ````
+
+   
+      
 
    ```bash
    $ kubectl apply -n metallb-system -f metallb-l2.yaml
