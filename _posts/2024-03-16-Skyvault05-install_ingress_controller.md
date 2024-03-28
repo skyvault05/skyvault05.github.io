@@ -67,7 +67,9 @@ Cloud환경에선 플랫폼에서 LB를 직접 제공하는 경우가 많다.
    $ kubectl get pod -n metallb-system
    ```
 
-4. IpAddressPool CR(사용자 리소스)를 만들어준다. spec은 원하는 IP 혹은 IP대역대로 적어주면 된다.
+4. IpAddressPool CR(사용자 리소스)를 만들어준다. spec은 원하는 IP 혹은 IP대역대로 적어주면 된다.   
+   
+
    ```bash
    # https://metallb.universe.tf/configuration/#defining-the-ips-to-assign-to-the-load-balancer-services에서 제공하는 예시
    # 파일명은 metallb-ipap.yaml로 정함
